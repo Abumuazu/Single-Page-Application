@@ -1,6 +1,6 @@
 
-let container = document.getElementById("catch")
-function main(){
+
+const main = () => {
     // toggleButtonFunction()
 
     fetch("https://swapi.dev/api/people")
@@ -48,8 +48,7 @@ const accessObjectData = objectData.results.map((element,index) => {
 
     
         
-    // accessObjectData.join(" ")
-    // console.log("Result", accessObjectData)
+
 
         
  document
@@ -63,11 +62,7 @@ const accessObjectData = objectData.results.map((element,index) => {
 }
 main()
 
-// const toggleButtonFunction = ( )=> {
-// let toggleButton = document.getElementById("toggle")
-//     if ( toggleButton.innerHTML === "Show"){ toggleButton.innerHTML = "Hide Details"  }
-//     else { toggleButton.innerHTML = "Show"}
-// } 
+
 
 
 const toggleText = (id) =>  {

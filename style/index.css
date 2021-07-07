@@ -3,7 +3,8 @@
     padding:0;
     box-sizing: border-box;
 }
-li
+
+
 
 *, *:before, *:after {
     margin: 0;
@@ -45,9 +46,7 @@ body {
 ul {
     transition: all 0.4s ease-out;
 }
-
-
-}}
+}
 .type {
     list-style-type: none;
     text-align: left;
@@ -365,14 +364,14 @@ li{
     background-color: #f07;
     position: relative;
     transform: skewX(-10deg);
-    left: -8rem;
+    left: -4rem;
     top: 1rem;
 }
 @media only screen and (max-width: 800px) {
     .people .illustration div {
-        height: 21rem;
-        width: 18rem;
-        left: -2rem;
+        height: 25rem;
+        width: 22rem;
+        left: -7rem;
         top: -2rem;
    }
 }
