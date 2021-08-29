@@ -1,0 +1,392 @@
+*, body, html{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 57%;
+   }
+}
+body {
+    background-color: #000;
+    color: #fff;
+    padding: 8rem;
+}
+@media only screen and (max-width: 1000px) {
+    body {
+        padding: 0;
+   }
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: row | row-reverse | column | column-reverse;
+}
+@media only screen and (max-width: 1000px) {
+    .container {
+        border-radius: 0;
+   }
+ul {
+    transition: all 0.4s ease-out;
+}
+}
+.type {
+    list-style-type: none;
+    text-align: left;
+}
+
+.child1 .child2 {
+    order: 5;
+}
+.people {
+    display: flex;
+    width: 500%;
+    height: 55rem;
+    transition: all 0.25s ease-in;
+    transform: translateX(0);
+}
+@media only screen and (max-width: 1000px) {
+    .people {
+        height: 100vh;
+   }
+}
+.people .box {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+@media only screen and (max-width: 650px) {
+    .people .box {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+   }
+}
+.people .box .bg {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, .2);
+    width: 55%;
+    transform: skewX(7deg);
+    position: absolute;
+    height: 100%;
+    left: -10%;
+    padding-left: 20rem;
+    transform-origin: 0 100%;
+    transition: 1s ease-in-out;
+}
+
+.headerimage{
+    background-image: url('image.jpg');
+  background-color: red;
+  background-blend-mode: screen;
+  
+}
+@media only screen and (max-width: 800px) {
+    .people .box .bg {
+        width: 65%;
+   }
+}
+@media only screen and (max-width: 650px) {
+    .people .box .bg {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        height: 54%;
+        transform: skewX(0deg);
+   }
+}
+
+.people .box .bg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: inherit;
+    pointer-events: none;
+    transform: skewX(10deg);
+}
+@media only screen and (max-width: 650px) {
+    .people .box .bg::before {
+        width: 120%;
+        bottom: 0;
+        transform: skewX(0deg);
+   }
+}
+.people .box .details {
+    padding: 5rem;
+    padding-left: 10rem;
+    z-index: 100;
+    grid-column: 1 / span 1;
+    grid-row: -1;
+    
+}
+@media only screen and (max-width: 650px) {
+    .people .box .details {
+        grid-row: 2 / span 1;
+        grid-column: -1;
+        text-align: center;
+        padding: 2rem;
+        transform: translateY(-9rem);
+   }
+}
+.people .box .details h1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+.people .box .details p {
+    display: inline-block;
+    font-size: 2.3rem;
+    color: #b5b4b4;
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
+}
+li{
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+}
+@media only screen and (max-width: 800px) {
+    .people .box .details p {
+        margin-right: 0;
+   }
+}
+.people .box .details button {
+    padding: 1rem 3rem;
+    color: #fff;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    transition: .6s linear;
+}
+.people .box .details button:hover {
+    opacity: 0.8;
+	box-shadow: 0 5px 10px rgba(184, 184, 255, 0.4);
+	transform: translate(50px);
+}@media only screen and (max-width: 800px) {
+    .people .box .details button:hover {
+        transform: translate(10px);
+   }
+}
+
+.people .box .details button:focus {
+    outline: none;
+    border: none;
+}
+
+/* box 0 styling  */
+.people .box0  {
+    background-color: #500033;
+}
+.people .box0  .inner .inner {
+    background-color: #f07;
+}
+.people .box0  .illustration .inner::after, .people .box0  .illustration .inner::before {
+    background-color: rgba(255, 0, 119, .1);
+}
+.people .box0  button {
+    background-color: #f07;
+    box-shadow: : 5px 5px 20px 
+}
+/* box 1 styling  */
+
+.people .box1  {
+    background-color: #000050;
+}
+.people .box1  .illustration .inner {
+    background-color: #03f;
+}
+.people .box1  .illustration .inner::after, .people .box1  .illustration .inner::before {
+    background-color: rgba(199, 191, 191, 0.05);
+}
+.people .box1  button {
+    background-color: #03f;
+}
+
+/* box 2 styling  */
+.people .box2  {
+    background-color: #300050;
+}
+.people .box2  .illustration .inner {
+    background-color: #8000ff;
+}
+.people .box2  .illustration .inner::after, .people .box2  .illustration .inner::before {
+    background-color: rgba(128, 0, 255, .05);
+}
+.people .box2  button {
+    background-color: #8000ff;
+}
+
+/* box 3 styling  */
+.people .box3  {
+    background-color: #500033;
+}
+.people .box3  .inner .inner {
+    background-color: #f07;
+}
+.people .box3  .illustration .inner::after, .people .box3  .illustration .inner::before {
+    background-color: rgba(255, 0, 119, .05);
+}
+.people .box3  button {
+    background-color: #f07;
+}
+/* box 4 styling  */
+
+.people .box4  {
+    background-color: #000050;
+}
+.people .box4  .illustration .inner {
+    background-color: #03f;
+}
+.people .box4  .illustration .inner::after, .people .box4  .illustration .inner::before {
+    background-color: rgba(199, 191, 191, 0.15);
+}
+.people .box4  button {
+    background-color: #03f;
+}
+
+/* box 5 styling  */
+.people .box5  {
+    background-color: #300050;
+}
+.people .box5  .illustration .inner {
+    background-color: #8000ff;
+}
+.people .box5  .illustration .inner::after, .people .box5  .illustration .inner::before {
+    background-color: rgba(128, 0, 255, .05);
+}
+.people .box5  button {
+    background-color: #8000ff;
+}
+
+/* box 6 styling  */
+.people .box6  {
+    background-color: #500033;
+}
+.people .box6  .inner .inner {
+    background-color: #f07;
+}
+.people .box6  .illustration .inner::after, .people .box6  .illustration .inner::before {
+    background-color: rgba(255, 0, 119, .1);
+}
+.people .box6  button {
+    background-color: #f07;
+}
+/* box 7 styling  */
+
+.people .box7  {
+    background-color: #000050;
+}
+.people .box7  .illustration .inner {
+    background-color: #03f;
+}
+.people .box7  .illustration .inner::after, .people .box7  .illustration .inner::before {
+    background-color: rgba(199, 191, 191, 0.15);
+}
+.people .box7  button {
+    background-color: #03f;
+}
+
+/* box two styling  */
+.people .box8  {
+    background-color: #300050;
+}
+.people .box8  .illustration .inner {
+    background-color: #8000ff;
+}
+.people .box8  .illustration .inner::after, .people .box8  .illustration .inner::before {
+    background-color: rgba(128, 0, 255, .05);
+}
+.people .box8  button {
+    background-color: #8000ff;
+}
+
+/* box 9 styling  */
+.people .box9  {
+    background-color: #500033;
+}
+.people .box9  .inner .inner {
+    background-color: #f07;
+}
+.people .box9  .illustration .inner::after, .people .box9  .illustration .inner::before {
+    background-color: rgba(255, 0, 119, .05);
+}
+.people .box9  button {
+    background-color: #f07;
+}
+
+
+.people .illustration {
+    grid-column: -2;
+    grid-row: -1;
+    justify-self: center;
+}
+@media only screen and (max-width: 650px) {
+    .people .illustration {
+        grid-row: 1 / span 1;
+        grid-column: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+}
+.people .illustration div {
+    height: 38rem;
+    width: 31rem;
+    border-radius: 3rem;
+    background-color: #f07;
+    position: relative;
+    transform: skewX(-10deg);
+    left: -4rem;
+    top: 1rem;
+}
+@media only screen and (max-width: 800px) {
+    .people .illustration div {
+        height: 25rem;
+        width: 22rem;
+        left: -7rem;
+        top: -2rem;
+   }
+}
+.people .illustration div::after, .people .illustration div::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    top: 0;
+    left: 0;
+}
+.people .illustration div::after {
+    transform: translate(4rem, -1rem);
+}
+.people .illustration div::before {
+    transform: translate(2rem, -2rem);
+}
